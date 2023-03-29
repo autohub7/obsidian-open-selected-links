@@ -5,7 +5,7 @@ This plugin allows users to easily open all selected links in edit mode, simplif
 Open all selected links in edit mode
 
 ## Demo
-**Setup a hotkey and open select links**\
+**Setup a hotkey and open selected links**\
 ![Example](demo.gif)
 
 ## Usage
