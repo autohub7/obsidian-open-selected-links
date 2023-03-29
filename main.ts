@@ -1,7 +1,21 @@
-import { Editor, MarkdownView, Plugin, TFile } from 'obsidian';
+import { App, Editor, MarkdownView, Plugin, TFile, Setting, PluginSettingTab, PaneType } from 'obsidian';
 
-export default class MyPlugin extends Plugin {
+interface Settings {
+    paneType: PaneType;
+}
+
+const DEFAULT_SETTINGS: Settings = {
+    paneType: 'tab'
+}
+
+export default class SelectOpenPlugIn extends Plugin {
+	settings: Settings;
+
 	async onload() {
+		await this.loadSettings();
+
+		this.addSettingTab(new SettingTab(this.app, this));
+
 		this.addCommand({
 			id: 'select-open-links',
 			name: 'Select Open Links',
@@ -13,9 +27,9 @@ export default class MyPlugin extends Plugin {
 
 	selectOpenTexts(view: MarkdownView) {
 		var files = this.getFilesName(view);
+
 		files.forEach((fileName) => {
-			console.log(fileName)
-			if(fileName) this.app.workspace.openLinkText(fileName, "", "tab", {active: false})
+			if(fileName) this.app.workspace.openLinkText(fileName, "", this.settings.paneType, {active: false})
 		})
 	}
 		
@@ -56,8 +70,7 @@ export default class MyPlugin extends Plugin {
                 .replace(/(\[\[|]])/g, '')
                 .replace(/\|.+/, '')
                 .replace(/#.+/, '')
-
-			console.log('wikiName    ', wikiName);
+			
             return this.getFilesByName(wikiName)
         })
     }
@@ -81,4 +94,40 @@ export default class MyPlugin extends Plugin {
 	onunload() {
 
 	}
+
+	async loadSettings() {
+        this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    }
+
+	async saveSettings() {
+		await this.saveData(this.settings);
+	}
+}
+
+class SettingTab extends PluginSettingTab {
+    plugin: SelectOpenPlugIn;
+
+    constructor(app: App, plugin: SelectOpenPlugIn) {
+        super(app, plugin);
+        this.plugin = plugin;
+    }
+
+    display(): void {
+        let {containerEl} = this;
+
+        containerEl.empty();
+        containerEl.createEl('h2', {text: 'Settings for "Add links to the current note" plugin'});
+		
+		new Setting(containerEl)
+			.setName('Select Openning links method')
+			.addDropdown(dropDown => {
+				dropDown.addOption('tab', 'Tab');
+				dropDown.addOption('window', 'Window');
+				dropDown.addOption('split', 'Split');
+				dropDown.onChange(async (value) =>	{
+					this.plugin.settings.paneType = (value as PaneType);
+					await this.plugin.saveSettings();
+				});
+			});
+    }
 }
