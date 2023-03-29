@@ -116,10 +116,10 @@ class SettingTab extends PluginSettingTab {
         let {containerEl} = this;
 
         containerEl.empty();
-        containerEl.createEl('h2', {text: 'Settings for "Add links to the current note" plugin'});
+        containerEl.createEl('h2', {text: 'Settings for "Open Selected Links" plugin'});
 		
 		new Setting(containerEl)
-			.setName('Select Openning links method')
+			.setName('Select Opening links method')
 			.addDropdown(dropDown => {
 				dropDown.addOption('tab', 'Tab');
 				dropDown.addOption('window', 'Window');

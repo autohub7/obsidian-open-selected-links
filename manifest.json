@@ -1,11 +1,11 @@
 {
-	"id": "select-open-links",
-	"name": "Select Open Links",
+	"id": "open-selected-links",
+	"name": "Open Selected Links",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
+	"description": "This plugin allows users to easily open all selected links in edit mode.",
 	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"authorUrl": "Steven Jin",
+	"fundingUrl": "https://ko-fi.com/stevenjin",
 	"isDesktopOnly": false
 }
