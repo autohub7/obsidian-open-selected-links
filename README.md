@@ -9,7 +9,7 @@ Open all selected links in edit mode
 ![Example](demo.gif)
 
 ## Usage
-Go to the Obsian Settings and set the interval of tab rotation (second) \
+Navigate to the configuration settings of Obsidian and establish a procedure for launching (Tab, Windows, and Open)
 *Setting > Community Plugins > Open Selected Links > Select Opening links method*
 
 ## Donating

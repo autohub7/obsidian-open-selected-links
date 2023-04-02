@@ -119,7 +119,7 @@ class SettingTab extends PluginSettingTab {
         containerEl.createEl('h2', {text: 'Settings for "Open Selected Links" plugin'});
 		
 		new Setting(containerEl)
-			.setName('Select Opening links method')
+			.setName('Select a procedure of opening a linked document')
 			.addDropdown(dropDown => {
 				dropDown.addOption('tab', 'Tab');
 				dropDown.addOption('window', 'Window');
