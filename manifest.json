@@ -1,6 +1,6 @@
 {
-	"id": "open-selected-links",
-	"name": "Open Selected Links",
+	"id": "bulkopen-selected-links",
+	"name": "Bulk open selected links",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "This plugin allows users to easily open all selected links in edit mode.",
