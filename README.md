@@ -9,7 +9,7 @@ Open all selected links in edit mode
 ![Example](demo.gif)
 
 ## Usage
-Navigate to the configuration settings of Obsidian and establish a procedure for launching (Tab, Windows, and Open)
+Navigate to the configuration settings of Obsidian and establish a procedure for launching (Tab, Window, and Split)
 *Setting > Community Plugins > Open Selected Links > Select Opening links method*
 
 ## Donating
