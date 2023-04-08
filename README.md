@@ -5,8 +5,11 @@ This plugin allows users to easily open all selected links in edit mode, simplif
 Open all selected links in edit mode
 
 ## Demo
-**Setup a hotkey and open selected links**\
-![Example](demo.gif)
+**Setup a hotkey and open selected links**
+
+
+https://user-images.githubusercontent.com/10937668/230734335-70af0b56-bdf2-437f-94a2-5d5517c27e37.mp4
+
 
 ## Usage
 Navigate to the configuration settings of Obsidian and establish a procedure for launching (Tab, Window, and Split)
