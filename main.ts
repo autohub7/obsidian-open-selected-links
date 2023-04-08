@@ -116,7 +116,7 @@ class SettingTab extends PluginSettingTab {
         let {containerEl} = this;
 
         containerEl.empty();
-        containerEl.createEl('h2', {text: 'Settings for "Open Selected Links" plugin'});
+        containerEl.createEl('h2', {text: 'Settings for Open Selected Links plugin'});
 		
 		new Setting(containerEl)
 			.setName('Select a procedure of opening a linked document')
