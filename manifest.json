@@ -4,8 +4,8 @@
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "This plugin allows users to easily open all selected links in edit mode.",
-	"author": "Obsidian",
-	"authorUrl": "Steven Jin",
+	"author": "Steven Jin",
+	"authorUrl": "https://github.com/autohub7",
 	"fundingUrl": "https://ko-fi.com/stevenjin",
 	"isDesktopOnly": false
 }
