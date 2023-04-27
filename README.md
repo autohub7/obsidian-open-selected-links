@@ -7,7 +7,7 @@ Open all selected links in edit mode
 ## Demo
 **Setup a hotkey and open selected links**
 
-![demo_bulkopen](https://user-images.githubusercontent.com/10937668/234926838-18565031-3846-429c-9434-e136383a7d39.gif)
+![demo_bulkopen](https://user-images.githubusercontent.com/10937668/234928018-e71ba367-8168-4e9d-9671-f5579699b392.gif)
 
 ## Usage
 Navigate to the configuration settings of Obsidian and establish a procedure for launching (Tab, Window, and Split)
